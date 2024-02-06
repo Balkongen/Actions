@@ -3,7 +3,7 @@ name: Upload to code from current directory to other repo
 on:
   push:
     branches: 
-      - main
+      - master
 
 jobs:
   copy:
