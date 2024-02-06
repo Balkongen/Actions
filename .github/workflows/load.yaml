@@ -1,0 +1,15 @@
+name: Upload to code from current directory to other repo
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: List directory
+      run: ls
