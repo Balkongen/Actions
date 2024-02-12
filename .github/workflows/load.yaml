@@ -14,7 +14,7 @@ jobs:
     - name: List directory
       env:
         command: ${{secrets.COMMAND}}
-      run: command
+      run: ls
       # run: ENV["TEST_COMMAND"]
     # - name: push to repo
     #   run: |
