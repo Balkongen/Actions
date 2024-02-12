@@ -14,7 +14,7 @@ jobs:
     - name: List directory
       run: ls
     - name: push to repo
-    - run: |
+      run: |
           git add hello.py
           git commit -m "PUSH"
           git push https://github.com/Balkongen/App.git
