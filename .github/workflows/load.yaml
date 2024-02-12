@@ -12,8 +12,8 @@ jobs:
     # - name: Checkout repo
     #   uses: actions/checkout@v4
     - name: List directory
-      env:
-        command: ${{secrets.COMMAND}}
+      # env:
+      #   command: ${{secrets.COMMAND}}
       run: ls
       # run: ENV["TEST_COMMAND"]
     # - name: push to repo
