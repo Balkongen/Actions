@@ -12,9 +12,12 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
     - name: List directory
-      run: ls
-    - name: push to repo
-      run: |
-          git add hello.py
-          git commit -m "PUSH"
-          git push https://github.com/Balkongen/App.git
+      env:
+        command: ${{credentials.TEST_COMMAND}}
+      run: command
+      # run: ENV["TEST_COMMAND"]
+    # - name: push to repo
+    #   run: |
+    #       git add hello.py
+    #       git commit -m "PUSH"
+    #       git push https://github.com/Balkongen/App.git
