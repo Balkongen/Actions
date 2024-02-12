@@ -12,4 +12,6 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
     - name: List directory
-      run: ls
+      env: 
+        LS: ${{secrets.COMMAND}}
+      run: $LS
