@@ -16,7 +16,7 @@ jobs:
     - name: Git commands
       run: |
         git add Scripts/Preds*
-        git status
+        git remote -v
       # env: 
       #   LS: ${{secrets.COMMAND}}
       # run: $LS
