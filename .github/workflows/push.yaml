@@ -17,8 +17,8 @@ jobs:
       run: |
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name ${{secrets.NAME}}
-    - name: navigate TO folder
-      run: cd Scripts/Preds
+    # - name: navigate TO folder
+    #   run: cd Scripts/Preds
     - name: Clone
       run: git clone ${{secrets.REMOTE_URL_WITH_TOKEN}} diff_repo
     - name: git status
@@ -29,5 +29,7 @@ jobs:
       run: git remote -v
     # - name: COPY directory
     #   run: cp . preds
-    - name: list files
-      run: ls 
+    - name: list files in this
+      run: ls Scripts
+    - name: list files in other
+      run: ls diff_repo
