@@ -34,4 +34,4 @@ jobs:
     - name: list files in this
       run: ls Scripts
     - name: list files in other
-      run: ls diff_repo
+      run: ls diff_repo/preds
