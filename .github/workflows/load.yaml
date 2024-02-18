@@ -15,7 +15,7 @@ jobs:
       run: ls
     - name: Git commands
       run: |
-        git add Scripts/Preds*
+        git remote add diff_remote ${{secrets.REMOTE_URL}}
         git remote -v
       # env: 
       #   LS: ${{secrets.COMMAND}}
