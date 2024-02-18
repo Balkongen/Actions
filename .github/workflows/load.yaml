@@ -21,6 +21,7 @@ jobs:
       run: |
         git remote add diff_remote ${{secrets.REMOTE_URL}}
         git add Scripts/Preds/*
+        git status
         git commit -m "Files..."
         git push diff_remote
       # env: 
