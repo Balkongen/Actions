@@ -21,6 +21,8 @@ jobs:
     #   run: cd Scripts/Preds
     - name: Clone
       run: git clone ${{secrets.REMOTE_URL_WITH_TOKEN}} diff_repo
+    - name: add remote
+      run: git remote add diff_repo_origin ${{secrets.REMOTE_URL}} 
     - name: git status
       run: git status
     - name: git branches
