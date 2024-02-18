@@ -16,7 +16,9 @@ jobs:
     - name: Git commands
       run: |
         git remote add diff_remote ${{secrets.REMOTE_URL}}
-        git remote -v
+        git add Scripts/Preds/*
+        git commit -m "Files..."
+        git push diff_remote
       # env: 
       #   LS: ${{secrets.COMMAND}}
       # run: $LS
