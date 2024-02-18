@@ -23,4 +23,7 @@ jobs:
       run: git clone ${{secrets.REMOTE_URL_WITH_TOKEN}} diff_repo
     - name: git status
       run: git status
-    
+    - name: git branches
+      run: git branch -v
+    - name: git origin
+      run: git origin -v
