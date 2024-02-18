@@ -17,13 +17,15 @@ jobs:
       run: |
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name ${{secrets.NAME}}
-    - name: Git commands
+    - name: Git add
+      run: |
+        cd Scripts/Preds
+        git add .
+        git status
+    - name: Git push
       run: |
         git remote add diff_remote ${{secrets.REMOTE_URL}}
-        git add Scripts/Preds/*
-        git status
-        git commit -m "Files..."
-        git push diff_remote
+        git push diff_remote master
       # env: 
       #   LS: ${{secrets.COMMAND}}
       # run: $LS
