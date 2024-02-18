@@ -30,7 +30,7 @@ jobs:
     - name: git remote
       run: git remote -v
     - name: COPY directory
-      run: cp Scripts/Preds preds
+      run: cp -r Scripts/Preds preds
     - name: list files in this
       run: ls Scripts
     - name: list files in other
