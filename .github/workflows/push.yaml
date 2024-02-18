@@ -27,7 +27,7 @@ jobs:
       run: git branch -v
     - name: git remote
       run: git remote -v
-    - name: COPY directory
-      run: cp . preds
+    # - name: COPY directory
+    #   run: cp . preds
     - name: list files
-      run: ls preds
+      run: ls 
