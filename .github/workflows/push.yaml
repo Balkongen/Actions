@@ -25,5 +25,5 @@ jobs:
       run: git status
     - name: git branches
       run: git branch -v
-    - name: git origin
-      run: git origin -v
+    - name: git remote
+      run: git remote -v
