@@ -37,6 +37,8 @@ jobs:
       run: ls Scripts
     - name: list files in other
       run: ls diff_repo/preds
+    - name: cd to diff_repo
+      run: cd diff_repo
     - name: ls 
       run: ls
     - name: git status
