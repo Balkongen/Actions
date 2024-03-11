@@ -37,9 +37,9 @@ jobs:
       run: ls Scripts
     - name: list files in other
       run: ls diff_repo/preds
-    # - name: git push
-    #   run: |
-    #     git add -A
-    #     git commit -m "Updated models"
-    #     git push 
+    - name: git push
+      run: |
+        git add -A
+        git commit -m "Updated models"
+        git push diff_repo_origin
       # TODO push to diff_repo
