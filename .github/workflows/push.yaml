@@ -39,6 +39,7 @@ jobs:
     - name: check diff_repo
       run: |
         cd diff_repo
+        git config --unset-all http.https://github.com/.extraheader
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name ${{secrets.NAME}}
         git remote add diff_repo_origin ${{secrets.REMOTE_URL}}
