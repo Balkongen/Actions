@@ -37,10 +37,12 @@ jobs:
     #   run: ls Scripts
     # - name: list files in other
     #   run: ls diff_repo/preds
+    - name: ls in diff_repo
+      run: ls diff_repo
     - name: pwd
       run: pwd
     - name: cd to diff_repo
-      run: cd diff_repo/preds
+      run: cd diff_repo
     - name: pwd
       run: pwd
     - name: ls 
