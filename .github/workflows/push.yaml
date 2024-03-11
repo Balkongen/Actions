@@ -43,9 +43,12 @@ jobs:
       run: pwd
     - name: check diff_repo
       run: |
-       cd diff_repo
-       ls -la
-       git status
+        cd diff_repo
+        ls -la
+        git status
+        git add -A
+        git commit -m "Updated models"
+        git push diff_repo_origin
     
     
     # - name: git push
