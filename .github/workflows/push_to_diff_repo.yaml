@@ -33,6 +33,7 @@ jobs:
       run: cp -r src/Scripts/Preds/* dest/preds
 
     - name: git 
+      working-directory: dest
       run: |
         git remote -v
         git status
