@@ -23,22 +23,26 @@ jobs:
       run: git clone ${{secrets.REMOTE_URL}} diff_repo
     - name: add remote
       run: git remote add diff_repo_origin ${{secrets.REMOTE_URL}} 
-    - name: git status
-      run: git status
-    - name: git branches
-      run: git branch -v
-    - name: git remote
-      run: git remote -v
+    # - name: git status
+    #   run: git status
+    # - name: git branches
+    #   run: git branch -v
+    # - name: git remote
+    #   run: git remote -v
     - name: Remove files in directory
       run: rm diff_repo/preds/*
     - name: COPY directory
       run: cp -r Scripts/Preds/* diff_repo/preds
-    - name: list files in this
-      run: ls Scripts
-    - name: list files in other
-      run: ls diff_repo/preds
+    # - name: list files in this
+    #   run: ls Scripts
+    # - name: list files in other
+    #   run: ls diff_repo/preds
+    - name: pwd
+      run: pwd
     - name: cd to diff_repo
       run: cd diff_repo
+    - name: pwd
+      run: pwd
     - name: ls 
       run: ls
     - name: git status
