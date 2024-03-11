@@ -12,7 +12,7 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
       with:
-        presist-credentials: false
+        persist-credentials: false
 
     - name: Checkout other repo
       uses: actions/checkout@v4
