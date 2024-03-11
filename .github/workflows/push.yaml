@@ -48,7 +48,8 @@ jobs:
         git status
         git add -A
         git commit -m "Updated models"
-        git push diff_repo_origin
+        git remote -v
+      # git push diff_repo_origin
     
     
     # - name: git push
