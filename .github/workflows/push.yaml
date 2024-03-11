@@ -42,7 +42,10 @@ jobs:
     - name: pwd
       run: pwd
     - name: cd to diff_repo
-      run: cd diff_repo
+      run: |
+       cd diff_repo
+       pwd
+       ls
     - name: pwd
       run: pwd
     - name: ls 
