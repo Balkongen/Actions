@@ -46,6 +46,8 @@ jobs:
         git remote add diff_repo_origin ${{secrets.REMOTE_URL}}
         git add -A
         git commit -m "Updated models"
+        git config user.name
+        "innan push"
         git push diff_repo_origin
     # - name: check root
     #   run: |
