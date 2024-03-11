@@ -20,9 +20,7 @@ jobs:
     # - name: navigate TO folder
     #   run: cd Scripts/Preds
     - name: Clone
-      run: git clone ${{secrets.REMOTE_URL}} diff_repo
-    - name: add remote
-      run: git remote add diff_repo_origin ${{secrets.REMOTE_URL}} 
+      run: git clone ${{secrets.REMOTE_URL}} diff_repo 
     # - name: git status
     #   run: git status
     # - name: git branches
@@ -46,9 +44,10 @@ jobs:
         cd diff_repo
         ls -la
         git status
+        git remote add diff_repo_origin ${{secrets.REMOTE_URL}}
         git add -A
         git commit -m "Updated models"
-        git push origin
+        git push diff_repo_origin
     # - name: check root
     #   run: |
     #     ls
