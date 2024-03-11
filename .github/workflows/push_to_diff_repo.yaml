@@ -25,3 +25,14 @@ jobs:
     
     - name: ls directory
       run: ls
+
+    - name: Remove files in directory
+      run: rm diff_repo/preds/* 
+
+    - name: Copy directory
+      run: cp -r src/Scripts/Preds/* dest/preds
+
+    - name: git 
+      run: |
+        git remote -v
+        git status
