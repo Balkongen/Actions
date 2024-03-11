@@ -1,0 +1,25 @@
+name: Push other repo
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        presist-credentials: false
+
+    - name: Checkout other repo
+      uses: actions/checkout@v4
+      with:
+        repository: ${{secrets.REPOSITORY}}
+        token: ${{secrets.TOKEN}}
+        persist-credentials: true
+    
+    - name: ls directory
+      run: ls
