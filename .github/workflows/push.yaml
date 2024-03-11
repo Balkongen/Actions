@@ -20,7 +20,7 @@ jobs:
     # - name: navigate TO folder
     #   run: cd Scripts/Preds
     - name: Clone
-      run: git clone ${{secrets.REMOTE_URL}} diff_repo 
+      run: git clone ${{secrets.REMOTE_URL_WITH_TOKEN}} diff_repo 
     # - name: git status
     #   run: git status
     # - name: git branches
