@@ -37,10 +37,10 @@ jobs:
     #   run: ls Scripts
     # - name: list files in other
     #   run: ls diff_repo/preds
-    - name: ls in diff_repo
-      run: ls diff_repo
-    - name: pwd
-      run: pwd
+    # - name: ls in diff_repo
+    #   run: ls diff_repo
+    # - name: pwd
+    #   run: pwd
     - name: check diff_repo
       run: |
         cd diff_repo
@@ -48,6 +48,10 @@ jobs:
         git status
         git add -A
         git commit -m "Updated models"
+        git remote -v
+    - name: check root
+      run: |
+        ls
         git remote -v
       # git push diff_repo_origin
     
