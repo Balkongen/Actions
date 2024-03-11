@@ -48,11 +48,11 @@ jobs:
         git status
         git add -A
         git commit -m "Updated models"
-        git remote -v
-    - name: check root
-      run: |
-        ls
-        git remote -v
+        git push origin
+    # - name: check root
+    #   run: |
+    #     ls
+    #     git remote -v
       # git push diff_repo_origin
     
     
