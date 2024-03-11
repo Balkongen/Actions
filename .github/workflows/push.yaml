@@ -39,10 +39,8 @@ jobs:
     - name: check diff_repo
       run: |
         cd diff_repo
-        ls -la
         git config --global user.email ${{secrets.EMAIL}}
         git config --global user.name ${{secrets.NAME}}
-        git status
         git remote add diff_repo_origin ${{secrets.REMOTE_URL}}
         git add -A
         git commit -m "Updated models"
