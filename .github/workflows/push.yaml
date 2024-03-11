@@ -41,17 +41,12 @@ jobs:
       run: ls diff_repo
     - name: pwd
       run: pwd
-    - name: cd to diff_repo
+    - name: check diff_repo
       run: |
        cd diff_repo
-       pwd
-       ls
-    - name: pwd
-      run: pwd
-    - name: ls 
-      run: ls
-    - name: git status
-      run: git status
+       ls -la
+       git status
+    
     
     # - name: git push
     #   run: |
